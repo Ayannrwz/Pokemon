@@ -1,0 +1,269 @@
+/* CSS Styles for Pokemon Cards */
+@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+/* @font-palette-values --Primary {
+  font-family: Rocher;
+  base-palette: 9;
+}
+
+.primary {
+  font-palette: --Primary;
+} */
+
+.container-fluid {
+  position: absolute;
+  margin-top: 40px;
+}
+
+.container-fluid .list {
+  margin-top: 30px;
+}
+
+.battle-pokemons {
+  min-height: 320px;
+}
+
+.pokemon-card {
+  display: block;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 7px 15px rgb(0, 0, 0);
+  margin: 10px;
+  width: 80%;
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+}
+
+.pokemon-card p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.pokemon-name {
+  font-size: 1.5em;
+  color: rgb(3, 41, 231) 333;
+  margin-bottom: 8px;
+}
+
+.pokemon-img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.pokemon-card h4,
+.pokemon-card h5,
+.pokemon-card h3 {
+  color: #b503dd;
+  font-size: 14px;
+  font-family: "Rocher";
+}
+
+.pokemon-card h2,
+h1,
+h2 {
+  font-family: "Rocher";
+}
+
+.pokemon-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pokemon-card ul li {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Animation */
+@keyframes roll {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+    background-image: url("../assets/Images/pokemon_back.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: visible;
+  }
+  100% {
+    transform: rotateY(360deg);
+    background-image: none;
+    backface-visibility: hidden;
+  }
+}
+
+.rotate-on-load {
+  animation: roll 1s linear;
+}
+
+/** Search Styles **/
+
+.search {
+  border-radius: 3px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid rgb(237, 131, 1);
+}
+
+.search:focus {
+  outline: none;
+  border: 3px solid #17fc03;
+}
+
+/** Center **/
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+/** Color type background **/
+
+.type-fire {
+  background-color: rgb(248, 139, 139);
+}
+
+.type-grass {
+  background-color: rgb(139, 248, 148);
+}
+
+.type-poison {
+  background-color: rgb(188, 139, 248);
+}
+
+.type-water {
+  background-color: rgb(139, 234, 248);
+}
+
+.type-bug {
+  background-color: rgb(237, 248, 139);
+}
+
+.type-normal {
+  background-color: rgb(255, 255, 255);
+}
+
+.type-electric {
+  background-color: #ecf002;
+}
+
+.type-ground {
+  background-color: #93952a;
+}
+
+.type-fairy {
+  background-color: #faa7f4;
+}
+
+.type-fighting {
+  background-color: #707070;
+}
+
+.type-psychic {
+  background-color: #ffa74f;
+}
+
+.type-rock {
+  background-color: #ebe1d8;
+}
+
+/** Small Cards **/
+.pokemon-card-small {
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  border-radius: 4px;
+  min-width: 120px;
+  min-height: 150px;
+}
+
+.team {
+  text-align: center;
+}
+
+.pokemon-card-small p {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.versus {
+  margin-top: 50%;
+  width: 150px;
+  height: auto;
+}
+
+/** Button **/
+.comic-button {
+  font-family: "Rocher";
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.team-name-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-name-box-lose {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #facad2, #fb2222);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-name-box-win {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #cbfaca, #67fb22);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Rocher";
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
